@@ -1,15 +1,22 @@
-:root {
-    --pink: hsl(322, 100%, 66%);
-}
 header {
-    font-family: 'Poppins', Courier, monospace;
+  font-family: "Poppins", sans-serif;
 }
-header a{
-    position: absolute;
-    right: 0px;
-    color: var(--pink);
-    border: var(--pink) 1px solid;
-    border-radius: 50px;
-    padding: 5px 10px;
-    margin-right: 5px;
+header a {
+  position: absolute;
+  right: 0px;
+  color: hsl(322, 100%, 66%);
+  border: hsl(322, 100%, 66%) 1px solid;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 12px;
 }
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+div.first {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
