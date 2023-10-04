@@ -1,4 +1,4 @@
-@mixin media-not-mobil {
+@mixin media-large-mobil {
     @media (min-width: 345px) {
         @content;
     }
@@ -6,15 +6,12 @@
 
 @mixin media-tablet {
     @media (min-width: 768px) {
-        // taille mobile selon convention actuelle
         @content;
     }
 }
 
 @mixin media-desktop {
-    @media (min-width: 1024px) {
-        // taille desktop selon convention actuelle
-        //1440px) {
+    @media (min-width: 1440px) {
         @content;
     }
 }

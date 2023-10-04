@@ -5,7 +5,7 @@ footer {
 header {
   img {
     width: 50vw;
-    @include media-not-mobil {
+    @include media-large-mobi {
       width: auto;
     }
   }
@@ -72,7 +72,7 @@ main {
       text-align: center;
       & > div {
         padding: 0 20px;
-        @include media-not-mobil() {
+        @include media-large-mobi() {
           padding: 0 50px;
         }
       }
@@ -100,7 +100,7 @@ main {
           max-width: -webkit-fill-available;
           max-width: -moz-available;
           padding: 0 20px;
-          @include media-not-mobil() {
+          @include media-large-mobi() {
             padding: 0 100px;
           }
           @include media-desktop {
@@ -109,20 +109,20 @@ main {
         }
         div {
           padding: 0 10px;
-          @include media-not-mobil() {
+          @include media-large-mobi() {
             padding: 0 50px;
           }
         }
         &:first-child {
           &::before {
             background-image: url("./images/bg-section-top-mobile-1.svg");
-            @include media-not-mobil() {
+            @include media-large-mobi() {
               background-image: url("./images/bg-section-top-desktop-1.svg");
             }
           }
           &::after {
             background-image: url("./images/bg-section-bottom-mobile-1.svg");
-            @include media-not-mobil() {
+            @include media-large-mobi() {
               background-image: url("./images/bg-section-bottom-desktop-1.svg");
             }
           }
@@ -130,13 +130,13 @@ main {
         &:last-child {
           &::before {
             background-image: url("./images/bg-section-top-mobile-2.svg");
-            @include media-not-mobil() {
+            @include media-large-mobi() {
               background-image: url("./images/bg-section-top-desktop-2.svg");
             }
           }
           &::after {
             background-image: url("./images/bg-section-bottom-mobile-2.svg");
-            @include media-not-mobil() {
+            @include media-large-mobi() {
               background-image: url("./images/bg-section-bottom-desktop-2.svg");
             }
           }
@@ -190,14 +190,14 @@ footer {
     left: 0px;
     position: absolute;
     top: -99px;
-    @include media-not-mobil() {
+    @include media-large-mobi() {
       background-image: url("./images/bg-footer-top-desktop.svg");
     }
   }
 
   div {
     margin: 20px;
-    @include media-not-mobil() {
+    @include media-large-mobi() {
       margin: 20px 50px;
     }
     @include media-tablet() {
@@ -248,7 +248,7 @@ footer {
       font-size: 30px;
       margin-right: 10px;
       color: white;
-      @include media-not-mobil {
+      @include media-large-mobi {
         font-size: 40px;
         margin-right: 20px;
       }
