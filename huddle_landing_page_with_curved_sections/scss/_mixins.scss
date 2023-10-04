@@ -1,0 +1,12 @@
+@mixin media-tablet {
+    @media (min-width: 768px) { // taille mobile selon convention actuelle
+        @content;
+    }
+}
+
+@mixin media-desktop {
+    @media (min-width: 1024px) { // taille desktop selon convention actuelle
+        //1440px) {
+        @content;
+    }
+}

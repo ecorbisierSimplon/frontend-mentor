@@ -1,0 +1,19 @@
+a {
+    &.border {
+        color: $pink;
+        border: $pink 1px solid;
+        border-radius: 50px;
+        padding: 5px 10px;
+        text-decoration: none;
+
+        &:hover {
+            border: $light_pink 1px solid;
+            color: $light_pink;
+        }
+    }
+    &.filling {
+        color: white;
+        background-color: $pink;
+    }
+
+}
