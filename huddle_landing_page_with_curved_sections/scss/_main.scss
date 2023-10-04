@@ -1,6 +1,12 @@
 header {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 
+  img {
+    width: 50vw;
+    @include media-not-mobil {
+      width: auto;
+    }
+  }
   a {
     position: absolute;
     right: 0px;
@@ -10,7 +16,7 @@ header {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0px;
 }
 
@@ -20,17 +26,8 @@ header {
 
 main {
   .section {
-    margin: 0 50px;
-
-    &:first-child {
-      text-align: center;
-
-      img {
-        margin-top: 80px !important;
-      }
-    }
-
     &__title {
+      text-align: center;
       div {
         padding: 20px;
         margin-bottom: 20px;
@@ -43,6 +40,11 @@ main {
     }
 
     &__counting {
+      display: flex;
+      flex-direction: column;
+      @include media-tablet() {
+        flex-direction: row;
+      }
       & > div {
         display: flex;
         flex-direction: column;
@@ -64,18 +66,88 @@ main {
       }
     }
 
+    &:first-child {
+      text-align: center;
+      & > div {
+        padding: 0 20px;
+        @include media-not-mobil() {
+          padding: 0 50px;
+        }
+      }
+      img {
+        margin-top: 80px !important;
+      }
+    }
+
     &:nth-child(2) {
       text-align: center;
       margin-top: 50px;
       article {
-        margin-top: 120px;
-        margin-bottom: 120px;
+        margin-top: 250px;
+        margin-bottom: 250px;
         img {
-          max-width: 100%;
+          max-width: -webkit-fill-available;
+          max-width: -moz-available;
+          padding: 0 20px;
+          @include media-not-mobil() {
+            padding: 0 100px;
+          }
+        }
+        div {
+          padding: 0 10px;
+          @include media-not-mobil() {
+            padding: 0 50px;
+          }
+        }
+        &:first-child {
+          &::before {
+            background-image: url("./images/bg-section-top-mobile-1.svg");
+            @include media-not-mobil() {
+              background-image: url("./images/bg-section-top-desktop-1.svg");
+            }
+          }
+          &::after {
+            background-image: url("./images/bg-section-bottom-mobile-1.svg");
+            @include media-not-mobil() {
+              background-image: url("./images/bg-section-bottom-desktop-1.svg");
+            }
+          }
+        }
+        &:last-child {
+          &::before {
+            background-image: url("./images/bg-section-top-mobile-2.svg");
+            @include media-not-mobil() {
+              background-image: url("./images/bg-section-top-desktop-2.svg");
+            }
+          }
+          &::after {
+            background-image: url("./images/bg-section-bottom-mobile-2.svg");
+            @include media-not-mobil() {
+              background-image: url("./images/bg-section-bottom-desktop-2.svg");
+            }
+          }
         }
 
         &:nth-child(odd) {
           background-color: $very_pale_blue;
+          background-clip: border-box;
+          position: relative;
+          &::before,
+          &::after {
+            background-repeat: no-repeat;
+            background-size: 100vw 100px;
+            content: "";
+            width: 100vw;
+            height: 100px;
+            left: 0px;
+            position: absolute;
+          }
+          &::before {
+            top: -100px;
+          }
+          &::after {
+            bottom: -100px;
+          }
         }
       }
     }
@@ -85,4 +157,20 @@ main {
 footer {
   background-color: $very_dark_cyan;
   color: white;
+  margin-top: 300px;
+  position: relative;
+  &::before {
+    background-image: url("./images/bg-footer-top-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100px;
+    content: "";
+    width: 100vw;
+    height: 100px;
+    left: 0px;
+    position: absolute;
+    top: -99px;
+    @include media-not-mobil() {
+      background-image: url("./images/bg-footer-top-desktop.svg");
+    }
+  }
 }

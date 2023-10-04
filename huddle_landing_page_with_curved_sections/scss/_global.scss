@@ -17,7 +17,7 @@ a {
         white-space: nowrap;
         max-width: 160px;
         margin: 50px auto;
-        padding: 15px 60px;
+        padding: 10px;
         font-weight: bold;
         color: white;
         background-color: $pink;
@@ -27,9 +27,16 @@ a {
             color: white;
             background-color: $light_pink;
         }
-        @include media-mobil {
-            padding: 10px;
+        @include media-not-mobil {
+            padding: 15px 60px;
         }
     }
+}
 
+.mobil_view {
+    display: block;
+
+    @include media-not-mobil {
+        display: none;
+    }
 }

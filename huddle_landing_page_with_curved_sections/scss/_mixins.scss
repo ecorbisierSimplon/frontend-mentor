@@ -1,17 +1,19 @@
-@mixin media-mobil {
-    @media (max-width: 344px) { 
+@mixin media-not-mobil {
+    @media (min-width: 345px) {
         @content;
     }
 }
 
 @mixin media-tablet {
-    @media (min-width: 768px) { // taille mobile selon convention actuelle
+    @media (min-width: 768px) {
+        // taille mobile selon convention actuelle
         @content;
     }
 }
 
 @mixin media-desktop {
-    @media (min-width: 1024px) { // taille desktop selon convention actuelle
+    @media (min-width: 1024px) {
+        // taille desktop selon convention actuelle
         //1440px) {
         @content;
     }
