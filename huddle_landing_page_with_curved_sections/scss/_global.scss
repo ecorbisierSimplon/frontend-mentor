@@ -11,9 +11,25 @@ a {
             color: $light_pink;
         }
     }
+
     &.filling {
+        display: block;
+        white-space: nowrap;
+        max-width: 160px;
+        margin: 50px auto;
+        padding: 15px 60px;
+        font-weight: bold;
         color: white;
         background-color: $pink;
+        box-shadow: 0px 3px 6px 1px hsl(0 5% 55% / 1);
+
+        &:hover {
+            color: white;
+            background-color: $light_pink;
+        }
+        @include media-mobil {
+            padding: 10px;
+        }
     }
 
 }

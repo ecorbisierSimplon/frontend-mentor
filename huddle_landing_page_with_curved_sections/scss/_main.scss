@@ -1,20 +1,88 @@
-
 header {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
-    a {
-        position: absolute;
-        right: 0px;
-        margin-right: 25px;
-        font-size: 12px;
-    }
+  a {
+    position: absolute;
+    right: 0px;
+    margin-right: 25px;
+    font-size: 12px;
+  }
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+header {
+  padding: 5px;
+}
+
+main {
+  .section {
+    margin: 0 50px;
+
+    &:first-child {
+      text-align: center;
+
+      img {
+        margin-top: 80px !important;
+      }
+    }
+
+    &__title {
+      div {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        margin-top: 30px;
+        width: 90%;
+      }
+    }
+
+    &__counting {
+      & > div {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+        img {
+          width: 40px;
+        }
+        & > span {
+          white-space: nowrap;
+          &:nth-child(2) {
+            font-size: 50pt;
+            font-weight: bold;
+          }
+          &:nth-child(3) {
+            color: rgb(102, 102, 102);
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      text-align: center;
+      margin-top: 50px;
+      article {
+        margin-top: 120px;
+        margin-bottom: 120px;
+        img {
+          max-width: 100%;
+        }
+
+        &:nth-child(odd) {
+          background-color: $very_pale_blue;
+        }
+      }
+    }
+  }
 }
 
 footer {
-    background-color: $Very_Dark_Cyan;
-    color: white;
+  background-color: $very_dark_cyan;
+  color: white;
 }

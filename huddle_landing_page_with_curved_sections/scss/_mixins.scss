@@ -1,3 +1,9 @@
+@mixin media-mobil {
+    @media (max-width: 344px) { 
+        @content;
+    }
+}
+
 @mixin media-tablet {
     @media (min-width: 768px) { // taille mobile selon convention actuelle
         @content;
