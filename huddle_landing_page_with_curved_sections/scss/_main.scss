@@ -1,6 +1,8 @@
-header {
+header,
+footer {
   font-family: "Open Sans", sans-serif;
-
+}
+header {
   img {
     width: 50vw;
     @include media-not-mobil {
@@ -85,12 +87,24 @@ main {
       article {
         margin-top: 250px;
         margin-bottom: 250px;
+        @include media-desktop {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          &:nth-child(even) {
+            flex-direction: row-reverse;
+          }
+        }
+
         img {
           max-width: -webkit-fill-available;
           max-width: -moz-available;
           padding: 0 20px;
           @include media-not-mobil() {
             padding: 0 100px;
+          }
+          @include media-desktop {
+            max-width: 40%;
           }
         }
         div {
@@ -159,6 +173,13 @@ footer {
   color: white;
   margin-top: 300px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include media-tablet() {
+    flex-direction: row-reverse;
+  }
+
   &::before {
     background-image: url("./images/bg-footer-top-mobile.svg");
     background-repeat: no-repeat;
@@ -171,6 +192,66 @@ footer {
     top: -99px;
     @include media-not-mobil() {
       background-image: url("./images/bg-footer-top-desktop.svg");
+    }
+  }
+
+  div {
+    margin: 20px;
+    @include media-not-mobil() {
+      margin: 20px 50px;
+    }
+    @include media-tablet() {
+      width: 49%;
+      max-width: 400px;
+    }
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        margin-top: 20px;
+        p {
+          margin: 0.5em;
+        }
+      }
+    }
+  }
+
+  img {
+    filter: brightness(0) invert(100%);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include media-tablet() {
+      flex-direction: row;
+    }
+    input {
+      border-radius: 5px !important;
+      padding: 5px !important;
+      margin: 5px !important;
+
+      &[type="email"] {
+        width: 95%;
+        margin-right: 5px !important;
+      }
+      &[type="submit"] {
+        text-align: right;
+        padding: 5px 15px !important;
+        box-shadow: none;
+      }
+    }
+  }
+  .social_networks {
+    a {
+      font-size: 30px;
+      margin-right: 10px;
+      color: white;
+      @include media-not-mobil {
+        font-size: 40px;
+        margin-right: 20px;
+      }
     }
   }
 }
