@@ -89,7 +89,7 @@ main .section:nth-child(2) article {
   margin-top: 250px;
   margin-bottom: 250px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   main .section:nth-child(2) article {
     display: flex;
     flex-direction: row;
@@ -109,7 +109,7 @@ main .section:nth-child(2) article img {
     padding: 0 100px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   main .section:nth-child(2) article img {
     max-width: 40%;
   }
@@ -261,6 +261,9 @@ footer .social_networks a {
   font-size: 30px;
   margin-right: 10px;
   color: white;
+}
+footer .social_networks a:hover {
+  color: cyan;
 }
 @media (min-width: 345px) {
   footer .social_networks a {

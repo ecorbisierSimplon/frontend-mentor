@@ -26,7 +26,7 @@
         color: white;
         background-color: $light_pink;
     }
-    @include media-large-mobi {
+    @include media-large-mobil {
         padding: 15px 60px;
     }
 }
@@ -34,7 +34,7 @@
 .mobil_view {
     display: block;
 
-    @include media-large-mobi {
+    @include media-large-mobil {
         display: none;
     }
 }
